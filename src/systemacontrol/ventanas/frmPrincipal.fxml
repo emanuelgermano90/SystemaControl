@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="systemacontrol.controladores.FrmPrincipalController">
+   <children>
+      <Label layoutX="313.0" layoutY="14.0" text="Systema Control">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="10.0" layoutY="56.0" prefHeight="430.0" prefWidth="780.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Buscar Producto">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblProductos" layoutX="15.0" layoutY="14.0" prefHeight="370.0" prefWidth="750.0">
+                          <columns>
+                            <TableColumn fx:id="tblProdID" prefWidth="60.0" text="ID" />
+                            <TableColumn fx:id="tblProdMarca" prefWidth="120.0" text="Marca" />
+                              <TableColumn fx:id="tblProdProd" prefWidth="250.0" text="Producto" />
+                              <TableColumn fx:id="tblProdTalle" prefWidth="60.0" text="Talle" />
+                              <TableColumn fx:id="tblProdCod" prefWidth="100.0" text="Codigo" />
+                              <TableColumn fx:id="tblProdCant" prefWidth="60.0" text="Cantidad" />
+                              <TableColumn fx:id="tblProdPre" prefWidth="100.0" text="Precio" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Buscar Clientes">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+          <Tab text="Agregar Producto">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="331.0" layoutY="1.0" text="Agregar Marca">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <TextField fx:id="txtMarca" layoutX="137.0" layoutY="51.0" AnchorPane.leftAnchor="100.0" />
+                        <Button layoutX="515.0" layoutY="51.0" mnemonicParsing="false" onAction="#btnAgreMarca" text="Agregar Marca" AnchorPane.rightAnchor="100.0" />
+                        <Separator layoutX="40.0" layoutY="90.0" prefWidth="700.0" />
+                        <Label layoutX="319.0" layoutY="104.0" text="Agregar Producto">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="52.0" layoutY="171.0" text="Seleccionar Marca" />
+                        <ComboBox fx:id="cbMarca" layoutX="169.0" layoutY="167.0" prefWidth="150.0" />
+                        <Label layoutX="519.0" layoutY="171.0" text="Codigo" />
+                        <TextField fx:id="txtCod" layoutX="569.0" layoutY="167.0" />
+                        <Label layoutX="52.0" layoutY="223.0" text="Producto" />
+                        <TextField fx:id="txtProd" layoutX="120.0" layoutY="219.0" prefHeight="25.0" prefWidth="358.0" />
+                        <Label layoutX="573.0" layoutY="223.0" text="Talle" />
+                        <TextField fx:id="txtTalle" layoutX="613.0" layoutY="219.0" prefHeight="25.0" prefWidth="100.0" />
+                        <Label layoutX="53.0" layoutY="278.0" text="Cantidad" />
+                        <TextField fx:id="txtCant" layoutX="120.0" layoutY="274.0" prefHeight="25.0" prefWidth="100.0" />
+                        <Label layoutX="479.0" layoutY="278.0" text="Precio Unitario" />
+                        <TextField fx:id="txtPrecio" layoutX="569.0" layoutY="274.0" />
+                        <Button layoutX="607.0" layoutY="351.0" mnemonicParsing="false" onAction="#btnAgrePro" text="Agregar Producto" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Agregar Clientes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Lista Publico">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab text="Lista Mayorista">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
